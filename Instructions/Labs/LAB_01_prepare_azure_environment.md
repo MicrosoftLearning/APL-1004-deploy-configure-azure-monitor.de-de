@@ -19,7 +19,7 @@ Bei diesen Lab-Übungen wird davon ausgegangen, dass Sie über globale Administr
 
 In dieser Übung erstellen Sie eine Entra ID-Sicherheitsgruppe.
 
-1. Geben Sie im Azure-Portal in der Suchleiste „Azure Active Directory“ (oder „Entra-ID“) ein, und wählen Sie in der Ergebnisliste „Azure Active Directory“ (oder „Entra-ID“) aus.
+1. Geben Sie in der Azure Portal-Suchleiste Azure Active Directory (oder Entra-ID) aus der Liste der Ergebnisse ein.
 1. Wählen Sie auf der Seite **Standardverzeichnis** die Option **Gruppen** aus.
 1. Wählen Sie auf der Seite **Gruppen** die Option **Neue Gruppe** aus.
 1. Geben Sie auf der Seite **Neue Gruppe** die Werte in der folgenden Tabelle an, und wählen Sie **Erstellen** aus.
@@ -28,8 +28,8 @@ In dieser Übung erstellen Sie eine Entra ID-Sicherheitsgruppe.
     | Eigenschaft | Wert    |
     |:---------|:---------|
     | Gruppentyp  | Sicherheit   |
-    | Gruppenname  | AppLogExaminers   |
-    | Gruppenbeschreibung  | AppLogExaminers   |
+    | Gruppenname  | App-Protokollprüfer   |
+    | Gruppenbeschreibung  | App-Protokollprüfer   |
 
 
 ## Bereitstellen und Konfigurieren von WS-VM1
@@ -66,11 +66,12 @@ In dieser Übung stellen Sie einen virtuellen Windows Server-Computer bereit und
 9. Wählen Sie auf der Seite **Netzwerk** die Option **Regel für eingehenden Port hinzufügen** aus.
 1. Konfigurieren Sie auf der Seite **Eingangssicherheitsregel hinzufügen** die folgenden Einstellungen, und wählen Sie **Hinzufügen** aus.
 
-    | Eigenschaft | Wert    |
+    | Eigenschaft | Value    |
     |:---------|:---------|
-    | Source  | Beliebig  |
+    | Quelle  | Beliebig  |
     | Quellportbereiche    | *   |
-    | Destination  | Beliebig   |
+    | Destination  | Any   |
+    | Dienst   | HTTP  |
     | Aktion    | Allow  |
     | Priorität  | 310   |
     | Name  | AllowAnyHTTPInbound  |
@@ -84,9 +85,9 @@ In dieser Übung stellen Sie einen virtuellen Windows Server-Computer bereit und
 1. Geben Sie in der erhöhten Eingabeaufforderung den folgenden Befehl ein, und drücken Sie die **Eingabetaste**.
     Install-WindowsFeature Web-Server  -IncludeAllSubFeature -IncludeManagementTools 
 1. Wenn die Installation abgeschlossen ist, führen Sie den folgenden Befehl aus, um zum Stammverzeichnis des Webservers zu wechseln.
-    Cd c:\inetpub\wwwroot\
+    cd c:\inetpub\wwwroot\
 1. Führen Sie den folgenden Befehl aus.
-    Wget https://raw.githubusercontent.com/Azure-Samples/html-docs-hello-world/master/index.html-OutFile index.html
+    Wget https://raw.githubusercontent.com/Azure-Samples/html-docs-hello-world/master/index.html -OutFile index.html
 
 
 ## Bereitstellen und Konfigurieren von LX-VM2
@@ -115,8 +116,10 @@ In dieser Übung erstellen und konfigurieren Sie einen virtuellen Linux-Computer
 
 4. Überprüfen Sie die Informationen, und wählen Sie **Erstellen** aus.
 1. Öffnen Sie nach dem Bereitstellen der VM die Seite **VM-Eigenschaften**, und wählen Sie **Erweiterungen + Anwendungen** unter **Einstellungen** aus.
-1. Wählen Sie **Hinzufügen** und dann den **Network Watcher-Agent für Linux** aus. Wählen Sie **Weiter** und anschließend **Überprüfen und erstellen** aus. Wählen Sie **Erstellen** aus.
-1. Konfigurieren Sie die AzureNetworkWatcherExtension und die OmsAgentForLinux-Erweiterung so, dass sie automatisch aktualisiert werden.
+1. Wählen Sie **Hinzufügen** und dann den **Network Watcher-Agent für Linux** aus. Wählen Sie **Weiter** und anschließend **Überprüfen und erstellen** aus. Wählen Sie **Erstellen**.
+
+> [!NOTE]
+> Die Installation und Konfiguration der OmsAgentForLinux-Erweiterung wird in Übung 2 ausgeführt, nachdem der Log Analytics-Arbeitsbereich erstellt wurde.
 
 
 ## Bereitstellen einer Web-App mit einer SQL-Datenbank
@@ -139,8 +142,8 @@ In dieser Übung erstellen und konfigurieren Sie einen virtuellen Linux-Computer
     | Anmeldename des SQL-Administrators   | prime  |
     | Anmeldekennwort des SQL-Administrators  | [Wählen Sie ein eindeutiges und sicheres Kennwort] P@ssw0rdP@ssw0rd   |
 
-8. Überprüfen Sie die angezeigten Informationen, und wählen Sie **Erstellen** aus.
-1. Wählen Sie nach Abschluss der Bereitstellung die Option **Zu Ressourcengruppe wechseln** aus.
+8. Überprüfen Sie die angezeigten Informationen und wählen Sie **Erstellen** aus.
+1. Wählen Sie nach Abschluss der Bereitstellung die Option **Zu Ressourcengruppe wechseln**.
 
 ## Bereitstellen einer Linux-Web-App
 
