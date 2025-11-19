@@ -4,7 +4,7 @@ lab:
   module: Guided Project - Deploy and configure Azure Monitor
 ---
 
-## Qualifikationsaufgabe
+## Qualifikationsaufgaben
 
 - Erstellen eines Datensammlungsendpunkts
 - Erstellen einer Datensammlungsregel
@@ -15,9 +15,9 @@ lab:
 
 ### Erstellen eines Datensammlungsendpunkts
 
-1. Geben Sie im Azure-Portal in der Suchleiste „Monitor“ ein, und wählen Sie in den Suchergebnissen „Monitor“ aus.
-1. Wählen Sie auf der Seite „Monitor“ unter „Einstellungen“ die Option für Datensammlungsendpunkte aus.
-1. Wählen Sie auf der Seite für Datensammlungsendpunkte die Option „Erstellen“ aus.
+1. Geben Sie in die Suchleiste im Azure-Portal **Monitor** ein und wählen Sie dann **Monitor** in der Ergebnisliste aus.
+1. Wählen Sie auf der Seite **Monitor** unter **Einstellungen**  die Option **Datensammlungsendpunkte** aus.
+1. Wählen Sie auf der Seite **Datensammlungsendpunkte** die Option **Erstellen** aus.
 1. Geben Sie auf der Seite zum Erstellen von Datensammlungsendpunkten die folgenden Einstellungen an, und wählen Sie dann „Überprüfen und erstellen“ aus.
 
     | Eigenschaft | Wert    |
@@ -27,7 +27,7 @@ lab:
     | Ressourcengruppe    | rg-alpha  |
     | Region    | USA, Osten  |
 
-5. Überprüfen Sie die Einstellungen, und wählen Sie „Erstellen“ aus.
+5. Überprüfen Sie die Einstellungen und wählen Sie **Erstellen** aus.
 
 ### Erstellen einer Datensammlungsregel
 
@@ -49,7 +49,7 @@ lab:
 1. Aktivieren Sie auf der Seite **Bereich auswählen** das Kontrollkästchen **WS-VM1**, und wählen Sie **Übernehmen** aus.
 1. Wählen Sie auf der Seite **einer Datensammlungsregel erstellen** die Option **Weiter** aus.
 1. Wählen Sie auf der Seite **Sammeln und liefern** die Option **Datenquelle hinzufügen** aus.
-1. Wählen Sie auf der Seite **Datenquelle hinzufügen** die Option **Windows-Ereignisprotokolle** aus. Aktivieren Sie in der Kategorie „Anwendung“ die Kategorien **Kritisch** und **Fehler**. Wählen Sie in der Kategorie **Sicherheit** die Kategorie **Überwachungsfehler** aus. Aktivieren Sie in der Kategorie **System** die Kategorien **Kritisch** und **Fehler**. 
+1. Wählen Sie auf der Seite **Datenquelle hinzufügen** die Option **Windows-Ereignisprotokolle** aus. Aktivieren Sie in der Kategorie **Anwendung** die Kategorien **Kritisch** und **Fehler**. Wählen Sie in der Kategorie **Sicherheit** die Kategorie **Überwachungsfehler** aus. Aktivieren Sie in der Kategorie **System** die Kategorien **Kritisch** und **Fehler**. 
 1. Wählen Sie **Weiter** aus.
 1. Konfigurieren Sie auf der Seite **Ziel** die folgenden Einstellungen:
 
@@ -87,13 +87,13 @@ lab:
 1. Geben Sie im Azure-Portal in der Suchleiste **Network Watcher** ein, und wählen Sie in den Suchergebnissen **Network Watcher** aus.
 1. Wählen Sie unter **Überwachung** die Option **Verbindungsmonitor** aus.
 1. Wählen Sie auf der Seite **Verbindungsmonitor** die Option **Erstellen** aus.
-1. Geben Sie auf der Seite **Grundlagen** des Assistenten zum Erstellen eines Verbindungsmonitors die folgenden Informationen an, und wählen Sie dann **Weiter** aus.
+1. Geben Sie auf der Seite **Grundlagen** des **Assistenten zum Erstellen des Verbindungsmonitors** die folgenden Informationen an und wählen Sie **Weiter** aus.
 
     | Eigenschaft | Wert    |
     |:---------|:---------|
     | Name des Verbindungsmonitors  | LinuxVMPubIP   |
     | Abonnement  | Ihr Abonnement   |
-    | Region    | USA, Osten  |
+    | Region    | USA (Ost) 2 |
     | Arbeitsbereich | LogAnalytics1  |
 
 5. Geben Sie auf der Seite **Testgruppendetails hinzufügen** den Namen **LinuxIPTest** ein, und wählen Sie **Quellen hinzufügen** aus.
